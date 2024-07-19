@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Madini-Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar light js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-6 col-xl-2">
+                        <div class="mb-0 site-logo">
+                            <a href="{% url 'index' %}" class="mb-0">madini portal<span class="text-primary">.</span></a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-10 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                                <li class="has-children">
+                                    <a href="{% url 'services' %}" class="nav-link">Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#" class="nav-link">Administration</a></li>
+                                        <li><a href="#" class="nav-link">Application</a></li>
+                                        <li><a href="#" class="nav-link">Indective price</a></li>
+                                        <li class="has-children">
+                                            <ul class="dropdown">
+                                                <li><a href="#">Menu One</a></li>
+                                                <li><a href="#">Menu Two</a></li>
+                                                <li><a href="#">Menu Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'administration' %}" class="nav-link">Administration</a></li>
+                                <li><a href="{% url 'blog' %}" class="active nav-link">Blog</a></li>
+                                <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+                                <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-instagram"></span></a></li>
+                                <li><a href="{% url 'login' %}" class="nav-link">Signin</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;">
+                        <a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3 text-white"></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+
+        <div class="slide-item overlay" style="background-image: url('{% static 'images/cyber1.avif' %}')">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6 align-self-center">
+                        <h1 class="heading mb-3">Blog &amp; Updates</h1>
+                        <p class="lead text-white mb-5">Are you in need to know more about Cyber issue and they are Hackathon update?</p>
+                        <p><a href="#" class="btn btn-primary">Get In Touch</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-7 text-center">
+                        <div class="heading">
+                            <h2 class="text-black">Our Latest Updates</h2>
+                        </div>
+                        <p>CODE CYPHER is there, and there is our Bot at the bottom you can ask us in our training model.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="{% static 'images/cyber2.jpeg' %}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span><span class="icon-calendar"></span><span>23 Jul</span></span>
+                                <span><span class="icon-user"></span><span>Admin</span></span>
+                                <span><span class="icon-comment"></span><span>2 Comments</span></span>
+                            </div>
+                            <h2><a href="#">We're Providing the Quality skills</a></h2>
+                            <p>There is the Hackathon introduced and URCINSEC are you aware of it.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="{% static 'images/cyber5.jpeg' %}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span><span class="icon-calendar"></span><span>23 Jul</span></span>
+                                <span><span class="icon-user"></span><span>Admin</span></span>
+                                <span><span class="icon-comment"></span><span>2 Comments</span></span>
+                            </div>
+                            <h2><a href="#">We're Providing the Quality Cyber people who graduate in our community</a></h2>
+                            <p>Do you need to give us an opportunity to test your System either an organization or company we can test it.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="{% static 'images/cyber7.jpeg' %}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span><span class="icon-calendar"></span><span>23 Jul</span></span>
+                                <span><span class="icon-user"></span><span>Admin</span></span>
+                                <span><span class="icon-comment"></span><span>2 Comments</span></span>
+                            </div>
+                            <h2><a href="#">We're Providing Quality Service</a></h2>
+                            <p>We are still growing. You can communicate with us in all needs you have in Cybersecurity.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mt-5">
+                        <a href="#" class="btn btn-primary rounded py-2 px-4 text-white">Load More Posts...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <h2 class="footer-heading text-white">About Us</h2>
+                        <p>We have experience in Cyber Security. You are welcome!</p>
+                        <ul class="list-unstyled social">
+                            <li><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ml-auto">
+                        <h2 class="footer-heading text-white">Quick Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'services' %}">Services</a></li>
+                            <li><a href="{% url 'administration' %}">Administration</a></li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="footer-heading text-white">We also serve</h2>
+                        <p>Online Training and practical of Cyber Security. Welcome!</p>
+                    </div>
+                </div>
+                <div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                        <div class="border-top pt-5">
+                            <p>Madini Portal &copy; 2024. All rights reserved | Designed by URCINSEC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <script defer async>
+        document.addEventListener('DOMContentLoaded', function() {
+          // setting global variables
+          window.botId = 4320
+          
+          // create div with id = sarufi-chatbox
+          const div = document.createElement("div")
+          div.id = "sarufi-chatbox"
+          document.body.appendChild(div)
+      
+          // create and attach script tag
+          const script = document.createElement("script")
+          script.crossOrigin = true
+          script.type = "module"
+          script.src = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/script.js"
+          document.head.appendChild(script)
+      
+          // create and attach css
+          const style = document.createElement("link")
+          style.crossOrigin = true
+          style.rel = "stylesheet"
+          style.href = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/style.css"
+          document.head.appendChild(style)
+        });
+      </script>
+
+</body>
+
+</html>

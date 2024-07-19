@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Madini-Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    {% load static %}
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .nav-tabs .nav-link.active {
+            background-color: #17a2b8;
+            color: black;
+        }
+
+        .nav-tabs .nav-link {
+            border: 1px solid #dee2e6;
+            border-radius: .25rem;
+        }
+
+        body {
+            background-image: url('{% static 'images/bg.jpg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content {
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header.site-navbar {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <div class="site-wrap">
+
+        <header class="site-navbar light js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-xl-2">
+                        <a href="{% url 'index' %}" class="mb-0">madini portal<span class="text-primary">.</span></a>
+                    </div>
+                    <div class="col-12 col-md-10 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li><a href="{% url 'index' %}" class="active nav-link">Home</a></li>
+                                <li class="has-children">
+                                    <a href="{% url 'services' %}" class="nav-link">Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#" class="nav-link">Administration</a></li>
+                                        <li><a href="application.html" class="nav-link">Application</a></li>
+                                        <li><a href="#" class="nav-link">Inductive Price</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="administration.html" class="nav-link">Administration</a></li>
+                                <li><a href="{% url 'blog' %}" class="active nav-link">Blog</a></li>
+                                <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+                                <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                                <li><a href="{% url 'login' %}" class="nav-link">Signin</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3 text-black"></span></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-section bg-light">
+            <div class="container">
+                <h2 class="mb-4">My Application (ADAM MASHAKA KATANI)</h2>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Step 1: My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="application-fee-tab" data-toggle="tab" href="#application-fee" role="tab" aria-controls="application-fee" aria-selected="false">Step 2: Application Fee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="academic-qualification-tab" data-toggle="tab" href="#academic-qualification" role="tab" aria-controls="academic-qualification" aria-selected="false">Step 3: Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="programme-choices-tab" data-toggle="tab" href="#programme-choices" role="tab" aria-controls="programme-choices" aria-selected="false">Step 4: Get LIcence</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Status: <span class="badge badge-success">Completed</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-success" role="alert">
+                                    You can now proceed to the next steps of your application
+                                </div>
+                                <form id="profile-form">
+                                    <div class="form-group">
+                                        <label for="entry-category">Entry Category</label>
+                                        <select id="entry-category" class="form-control">
+                                            <option selected>Apply as Admin</option>
+                                            <option>Apply as Buyer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">First Name</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="middlename">Middle Name</label>
+                                        <input type="text" class="form-control" id="middlename" placeholder="Middle Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Last Name</label>
+                                        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select id="gender" class="form-control">
+                                            <option selected>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthdate">Birth Date</label>
+                                        <input type="date" class="form-control" id="birthdate" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phonenumber">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phonenumber" placeholder="Phone Number" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="application-fee" role="tabpanel" aria-labelledby="application-fee-tab">
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Status: <span class="badge badge-warning">Pending</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info" role="alert">
+                                    Please complete your profile first
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="academic-qualification" role="tabpanel" aria-labelledby="academic-qualification-tab">
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Status: <span class="badge badge-warning">Pending</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info" role="alert">
+                                    Please complete your profile first
+                                </div>
+                                <div class="form-group">
+                                    <label for="document-type">Select Document Type</label>
+                                    <select id="document-type" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="buyer">Buyer</option>
+                                    </select>
+                                </div>
+                                <a href="https://portal.madini.go.tz/site/Downloads/OMCTP1.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                                <form id="upload-form" enctype="multipart/form-data" class="mt-3">
+                                    <div class="form-group">
+                                        <label for="uploaded-file">Upload Filled PDF</label>
+                                        <input type="file" id="uploaded-file" class="form-control-file" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="programme-choices" role="tabpanel" aria-labelledby="programme-choices-tab">
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Status: <span class="badge badge-warning">Pending</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info" role="alert">
+                                    Please complete your profile first
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <script defer async>
+        document.addEventListener('DOMContentLoaded', function() {
+          // setting global variables
+          window.botId = 4320
+          
+          // create div with id = sarufi-chatbox
+          const div = document.createElement("div")
+          div.id = "sarufi-chatbox"
+          document.body.appendChild(div)
+      
+          // create and attach script tag
+          const script = document.createElement("script")
+          script.crossOrigin = true
+          script.type = "module"
+          script.src = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/script.js"
+          document.head.appendChild(script)
+      
+          // create and attach css
+          const style = document.createElement("link")
+          style.crossOrigin = true
+          style.rel = "stylesheet"
+          style.href = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/style.css"
+          document.head.appendChild(style)
+        });
+      </script>
+
+</body>
+</html>
